@@ -64,9 +64,20 @@ jobs:
       - name: Install conan
         run: pip install "conan==2.28.0"
 
+      - name: Create test keystore
+        run: |
+          keytool -genkeypair -v \
+            -keystore ${{ github.workspace }}/android.keystore \
+            -alias amn -keyalg RSA -keysize 2048 -validity 10000 \
+            -storepass amn2026amn -keypass amn2026amn \
+            -dname "CN=AMN VPN, OU=AMN, O=AMN, L=Moscow, ST=Moscow, C=RU"
+
       - name: Build APK
         env:
           QT_INSTALL_DIR: ${{ runner.temp }}
+          QT_ANDROID_KEYSTORE_PATH: ${{ github.workspace }}/android.keystore
+          QT_ANDROID_KEYSTORE_STORE_PASS: amn2026amn
+          QT_ANDROID_KEYSTORE_ALIAS: amn
         shell: bash
         run: deploy/build.sh -t android
 

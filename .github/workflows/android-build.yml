@@ -1,0 +1,80 @@
+name: Android APK
+
+on:
+  push:
+    branches: [ dev ]
+  workflow_dispatch:
+
+env:
+  QT_VERSION: 6.10.1
+  QT_MODULES: 'qtremoteobjects qt5compat qtimageformats qtshadertools'
+  ANDROID_PLATFORM: android-28
+  NDK_VERSION: 27.0.11718014
+  ABIS: arm64-v8a
+
+jobs:
+  build-android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - name: Get sources
+        uses: actions/checkout@v4
+        with:
+          submodules: 'true'
+          fetch-depth: 1
+
+      - name: Install desktop Qt
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: ${{ env.QT_VERSION }}
+          host: 'linux'
+          target: 'desktop'
+          arch: 'linux_gcc_64'
+          modules: ${{ env.QT_MODULES }}
+          dir: ${{ runner.temp }}
+          py7zrversion: '==0.22.*'
+
+      - name: Install android_arm64_v8a Qt
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: ${{ env.QT_VERSION }}
+          host: 'linux'
+          target: 'android'
+          arch: 'android_arm64_v8a'
+          modules: ${{ env.QT_MODULES }}
+          dir: ${{ runner.temp }}
+          py7zrversion: '==0.22.*'
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v4
+        with:
+          packages: "platforms;${{ env.ANDROID_PLATFORM }} ndk;${{ env.NDK_VERSION }}"
+
+      - name: Setup python
+        uses: actions/setup-python@v6
+        with:
+          python-version: 3.12
+
+      - name: Install conan
+        run: pip install "conan==2.28.0"
+
+      - name: Build APK
+        env:
+          QT_INSTALL_DIR: ${{ runner.temp }}
+        shell: bash
+        run: deploy/build.sh -t android
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: amn-vpn-apk
+          path: |
+            deploy/build/**/*.apk
+            deploy/artifacts/*.apk
+          retention-days: 14

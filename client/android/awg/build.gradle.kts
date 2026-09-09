@@ -8,7 +8,7 @@ kotlin {
 }
 
 android {
-    namespace = "org.amnezia.vpn.protocol.awg"
+    namespace = "ru.amn.vpn.protocol.awg"
 }
 
 dependencies {

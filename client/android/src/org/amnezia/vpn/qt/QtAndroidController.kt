@@ -1,7 +1,7 @@
-package org.amnezia.vpn.qt
+package ru.amn.vpn.qt
 
-import org.amnezia.vpn.protocol.ProtocolState
-import org.amnezia.vpn.protocol.Status
+import ru.amn.vpn.protocol.ProtocolState
+import ru.amn.vpn.protocol.Status
 
 /**
  * JNI functions of the AndroidController class from android_controller.cpp,

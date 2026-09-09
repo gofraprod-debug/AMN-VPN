@@ -10,7 +10,7 @@ import com.android.billingclient.api.BillingClient.BillingResponseCode.SERVICE_D
 import com.android.billingclient.api.BillingClient.BillingResponseCode.SERVICE_UNAVAILABLE
 import com.android.billingclient.api.BillingClient.BillingResponseCode.USER_CANCELED
 import com.android.billingclient.api.BillingResult
-import org.amnezia.vpn.util.ErrorCode
+import ru.amn.vpn.util.ErrorCode
 
 internal class BillingException(
     billingResult: BillingResult,

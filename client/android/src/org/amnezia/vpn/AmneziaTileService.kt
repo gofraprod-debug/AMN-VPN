@@ -1,4 +1,4 @@
-package org.amnezia.vpn
+package ru.amn.vpn
 
 import android.annotation.SuppressLint
 import android.app.PendingIntent
@@ -19,14 +19,14 @@ import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
-import org.amnezia.vpn.protocol.ProtocolState
-import org.amnezia.vpn.protocol.ProtocolState.CONNECTED
-import org.amnezia.vpn.protocol.ProtocolState.CONNECTING
-import org.amnezia.vpn.protocol.ProtocolState.DISCONNECTED
-import org.amnezia.vpn.protocol.ProtocolState.DISCONNECTING
-import org.amnezia.vpn.protocol.ProtocolState.RECONNECTING
-import org.amnezia.vpn.protocol.ProtocolState.UNKNOWN
-import org.amnezia.vpn.util.Log
+import ru.amn.vpn.protocol.ProtocolState
+import ru.amn.vpn.protocol.ProtocolState.CONNECTED
+import ru.amn.vpn.protocol.ProtocolState.CONNECTING
+import ru.amn.vpn.protocol.ProtocolState.DISCONNECTED
+import ru.amn.vpn.protocol.ProtocolState.DISCONNECTING
+import ru.amn.vpn.protocol.ProtocolState.RECONNECTING
+import ru.amn.vpn.protocol.ProtocolState.UNKNOWN
+import ru.amn.vpn.util.Log
 
 private const val TAG = "AmneziaTileService"
 private const val DEFAULT_TILE_LABEL = "AmneziaVPN"

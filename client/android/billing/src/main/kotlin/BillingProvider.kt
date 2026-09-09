@@ -26,8 +26,8 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.withContext
-import org.amnezia.vpn.util.ErrorCode
-import org.amnezia.vpn.util.Log
+import ru.amn.vpn.util.ErrorCode
+import ru.amn.vpn.util.Log
 import org.json.JSONArray
 import org.json.JSONObject
 import java.text.NumberFormat

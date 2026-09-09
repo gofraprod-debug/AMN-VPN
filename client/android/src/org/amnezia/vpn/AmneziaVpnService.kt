@@ -1,4 +1,4 @@
-package org.amnezia.vpn
+package ru.amn.vpn
 
 import android.annotation.SuppressLint
 import android.app.ActivityManager
@@ -40,28 +40,28 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withTimeout
-import org.amnezia.vpn.protocol.BadConfigException
-import org.amnezia.vpn.protocol.ProtocolState.CONNECTED
-import org.amnezia.vpn.protocol.ProtocolState.CONNECTING
-import org.amnezia.vpn.protocol.ProtocolState.DISCONNECTED
-import org.amnezia.vpn.protocol.ProtocolState.DISCONNECTING
-import org.amnezia.vpn.protocol.ProtocolState.RECONNECTING
-import org.amnezia.vpn.protocol.ProtocolState.UNKNOWN
-import org.amnezia.vpn.protocol.VpnException
-import org.amnezia.vpn.protocol.VpnStartException
-import org.amnezia.vpn.protocol.putStatus
-import org.amnezia.vpn.util.LoadLibraryException
-import org.amnezia.vpn.util.Log
-import org.amnezia.vpn.util.Prefs
-import org.amnezia.vpn.util.net.NetworkState
-import org.amnezia.vpn.util.net.TrafficStats
+import ru.amn.vpn.protocol.BadConfigException
+import ru.amn.vpn.protocol.ProtocolState.CONNECTED
+import ru.amn.vpn.protocol.ProtocolState.CONNECTING
+import ru.amn.vpn.protocol.ProtocolState.DISCONNECTED
+import ru.amn.vpn.protocol.ProtocolState.DISCONNECTING
+import ru.amn.vpn.protocol.ProtocolState.RECONNECTING
+import ru.amn.vpn.protocol.ProtocolState.UNKNOWN
+import ru.amn.vpn.protocol.VpnException
+import ru.amn.vpn.protocol.VpnStartException
+import ru.amn.vpn.protocol.putStatus
+import ru.amn.vpn.util.LoadLibraryException
+import ru.amn.vpn.util.Log
+import ru.amn.vpn.util.Prefs
+import ru.amn.vpn.util.net.NetworkState
+import ru.amn.vpn.util.net.TrafficStats
 import org.json.JSONException
 import org.json.JSONObject
 
 private const val TAG = "AmneziaVpnService"
 
-const val ACTION_DISCONNECT = "org.amnezia.vpn.action.disconnect"
-const val ACTION_CONNECT = "org.amnezia.vpn.action.connect"
+const val ACTION_DISCONNECT = "ru.amn.vpn.action.disconnect"
+const val ACTION_CONNECT = "ru.amn.vpn.action.connect"
 
 const val MSG_VPN_CONFIG = "VPN_CONFIG"
 const val MSG_ERROR = "ERROR"

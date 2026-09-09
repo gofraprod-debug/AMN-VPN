@@ -1,4 +1,4 @@
-package org.amnezia.vpn
+package ru.amn.vpn
 
 import android.app.Activity
 import android.content.Context

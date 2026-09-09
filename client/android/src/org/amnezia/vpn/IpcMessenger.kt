@@ -1,10 +1,10 @@
-package org.amnezia.vpn
+package ru.amn.vpn
 
 import android.os.DeadObjectException
 import android.os.Message
 import android.os.Messenger
 import android.os.RemoteException
-import org.amnezia.vpn.util.Log
+import ru.amn.vpn.util.Log
 
 private const val TAG = "IpcMessenger"
 

@@ -1,4 +1,4 @@
-package org.amnezia.vpn.protocol
+package ru.amn.vpn.protocol
 
 import android.os.Bundle
 

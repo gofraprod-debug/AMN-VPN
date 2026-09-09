@@ -1,4 +1,4 @@
-package org.amnezia.vpn
+package ru.amn.vpn
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -56,12 +56,12 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
-import org.amnezia.vpn.protocol.getStatistics
-import org.amnezia.vpn.protocol.getStatus
-import org.amnezia.vpn.qt.QtAndroidController
-import org.amnezia.vpn.util.LibraryLoader.loadSharedLibrary
-import org.amnezia.vpn.util.Log
-import org.amnezia.vpn.util.Prefs
+import ru.amn.vpn.protocol.getStatistics
+import ru.amn.vpn.protocol.getStatus
+import ru.amn.vpn.qt.QtAndroidController
+import ru.amn.vpn.util.LibraryLoader.loadSharedLibrary
+import ru.amn.vpn.util.Log
+import ru.amn.vpn.util.Prefs
 import org.json.JSONException
 import org.json.JSONObject
 import org.qtproject.qt.android.bindings.QtActivity

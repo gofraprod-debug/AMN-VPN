@@ -1,9 +1,9 @@
-package org.amnezia.vpn.protocol.wireguard
+package ru.amn.vpn.protocol.wireguard
 
 import android.util.Base64
-import org.amnezia.vpn.protocol.BadConfigException
-import org.amnezia.vpn.protocol.ProtocolConfig
-import org.amnezia.vpn.util.net.InetEndpoint
+import ru.amn.vpn.protocol.BadConfigException
+import ru.amn.vpn.protocol.ProtocolConfig
+import ru.amn.vpn.util.net.InetEndpoint
 
 private const val WIREGUARD_DEFAULT_MTU = 1280
 

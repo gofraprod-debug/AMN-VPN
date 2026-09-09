@@ -1,4 +1,4 @@
-package org.amnezia.vpn.protocol.openvpn
+package ru.amn.vpn.protocol.openvpn
 
 import android.net.ProxyInfo
 import android.os.Build
@@ -12,13 +12,13 @@ import net.openvpn.ovpn3.ClientAPI_OpenVPNClient
 import net.openvpn.ovpn3.ClientAPI_Status
 import net.openvpn.ovpn3.ClientAPI_StringVec
 import net.openvpn.ovpn3.ClientAPI_TransportStats
-import org.amnezia.vpn.protocol.ProtocolState
-import org.amnezia.vpn.protocol.ProtocolState.CONNECTED
-import org.amnezia.vpn.protocol.ProtocolState.DISCONNECTED
-import org.amnezia.vpn.protocol.ProtocolState.RECONNECTING
-import org.amnezia.vpn.util.Log
-import org.amnezia.vpn.util.net.InetNetwork
-import org.amnezia.vpn.util.net.parseInetAddress
+import ru.amn.vpn.protocol.ProtocolState
+import ru.amn.vpn.protocol.ProtocolState.CONNECTED
+import ru.amn.vpn.protocol.ProtocolState.DISCONNECTED
+import ru.amn.vpn.protocol.ProtocolState.RECONNECTING
+import ru.amn.vpn.util.Log
+import ru.amn.vpn.util.net.InetNetwork
+import ru.amn.vpn.util.net.parseInetAddress
 
 private const val TAG = "OpenVpnClient"
 private const val EMULATED_EXCLUDE_ROUTES = (1 shl 16)

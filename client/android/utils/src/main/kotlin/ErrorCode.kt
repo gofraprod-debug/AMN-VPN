@@ -1,4 +1,4 @@
-package org.amnezia.vpn.util
+package ru.amn.vpn.util
 
 // keep synchronized with client/core/utils/errorCodes.h amnezia::ErrorCode
 object ErrorCode {

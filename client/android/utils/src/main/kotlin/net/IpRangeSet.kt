@@ -1,4 +1,4 @@
-package org.amnezia.vpn.util.net
+package ru.amn.vpn.util.net
 
 class IpRangeSet {
 

@@ -1,4 +1,4 @@
-package org.amnezia.vpn.protocol.openvpn
+package ru.amn.vpn.protocol.openvpn
 
 import android.net.VpnService.Builder
 import kotlinx.coroutines.CoroutineScope
@@ -6,15 +6,15 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 import net.openvpn.ovpn3.ClientAPI_Config
-import org.amnezia.vpn.protocol.BadConfigException
-import org.amnezia.vpn.protocol.Protocol
-import org.amnezia.vpn.protocol.ProtocolState.DISCONNECTED
-import org.amnezia.vpn.protocol.Statistics
-import org.amnezia.vpn.protocol.VpnStartException
-import org.amnezia.vpn.util.LibraryLoader.loadSharedLibrary
-import org.amnezia.vpn.util.net.InetNetwork
-import org.amnezia.vpn.util.net.getLocalNetworks
-import org.amnezia.vpn.util.net.parseInetAddress
+import ru.amn.vpn.protocol.BadConfigException
+import ru.amn.vpn.protocol.Protocol
+import ru.amn.vpn.protocol.ProtocolState.DISCONNECTED
+import ru.amn.vpn.protocol.Statistics
+import ru.amn.vpn.protocol.VpnStartException
+import ru.amn.vpn.util.LibraryLoader.loadSharedLibrary
+import ru.amn.vpn.util.net.InetNetwork
+import ru.amn.vpn.util.net.getLocalNetworks
+import ru.amn.vpn.util.net.parseInetAddress
 import org.json.JSONObject
 
 open class OpenVpn : Protocol() {

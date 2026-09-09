@@ -1,4 +1,4 @@
-package org.amnezia.vpn
+package ru.amn.vpn
 
 import android.app.Application
 import androidx.datastore.core.CorruptionException
@@ -17,9 +17,9 @@ import kotlinx.serialization.SerializationException
 import kotlinx.serialization.decodeFromByteArray
 import kotlinx.serialization.encodeToByteArray
 import kotlinx.serialization.protobuf.ProtoBuf
-import org.amnezia.vpn.protocol.ProtocolState
-import org.amnezia.vpn.protocol.ProtocolState.DISCONNECTED
-import org.amnezia.vpn.util.Log
+import ru.amn.vpn.protocol.ProtocolState
+import ru.amn.vpn.protocol.ProtocolState.DISCONNECTED
+import ru.amn.vpn.util.Log
 
 private const val TAG = "VpnState"
 private const val STORE_FILE_NAME = "vpnState"

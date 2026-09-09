@@ -1,12 +1,12 @@
-package org.amnezia.vpn.protocol
+package ru.amn.vpn.protocol
 
 import android.net.ProxyInfo
 import android.os.Build
 import androidx.annotation.RequiresApi
 import java.net.InetAddress
-import org.amnezia.vpn.util.net.InetNetwork
-import org.amnezia.vpn.util.net.IpRange
-import org.amnezia.vpn.util.net.IpRangeSet
+import ru.amn.vpn.util.net.InetNetwork
+import ru.amn.vpn.util.net.IpRange
+import ru.amn.vpn.util.net.IpRangeSet
 
 open class ProtocolConfig protected constructor(
     val addresses: Set<InetNetwork>,

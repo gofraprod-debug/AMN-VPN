@@ -1,3 +1,3 @@
-package org.amnezia.vpn
+package ru.amn.vpn
 
 class AwgService : AmneziaVpnService()

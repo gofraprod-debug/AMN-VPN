@@ -1,4 +1,4 @@
-package org.amnezia.vpn
+package ru.amn.vpn
 
 import android.Manifest.permission
 import android.annotation.SuppressLint
@@ -14,16 +14,16 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationCompat.Action
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
-import org.amnezia.vpn.protocol.ProtocolState
-import org.amnezia.vpn.protocol.ProtocolState.CONNECTED
-import org.amnezia.vpn.protocol.ProtocolState.DISCONNECTED
-import org.amnezia.vpn.util.Log
-import org.amnezia.vpn.util.net.TrafficStats.TrafficData
+import ru.amn.vpn.protocol.ProtocolState
+import ru.amn.vpn.protocol.ProtocolState.CONNECTED
+import ru.amn.vpn.protocol.ProtocolState.DISCONNECTED
+import ru.amn.vpn.util.Log
+import ru.amn.vpn.util.net.TrafficStats.TrafficData
 
 private const val TAG = "ServiceNotification"
 
-private const val OLD_NOTIFICATION_CHANNEL_ID: String = "org.amnezia.vpn.notification"
-private const val NOTIFICATION_CHANNEL_ID: String = "org.amnezia.vpn.notifications"
+private const val OLD_NOTIFICATION_CHANNEL_ID: String = "ru.amn.vpn.notification"
+private const val NOTIFICATION_CHANNEL_ID: String = "ru.amn.vpn.notifications"
 const val NOTIFICATION_ID = 1337
 
 private const val GET_ACTIVITY_REQUEST_CODE = 0

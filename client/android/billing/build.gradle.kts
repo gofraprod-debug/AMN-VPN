@@ -8,7 +8,7 @@ kotlin {
 }
 
 android {
-    namespace = "org.amnezia.vpn.billing"
+    namespace = "ru.amn.vpn.billing"
 }
 
 dependencies {

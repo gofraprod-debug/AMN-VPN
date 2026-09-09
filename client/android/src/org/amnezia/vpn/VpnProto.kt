@@ -4,7 +4,7 @@ import ru.amn.vpn.protocol.Protocol
 import ru.amn.vpn.protocol.awg.Awg
 import ru.amn.vpn.protocol.openvpn.OpenVpn
 import ru.amn.vpn.protocol.wireguard.Wireguard
-import ru.amn.vpn.protocol.xray.Xray
+import org.amnezia.vpn.protocol.xray.Xray
 
 enum class VpnProto(
     val label: String,

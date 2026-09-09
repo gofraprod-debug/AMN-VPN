@@ -257,19 +257,18 @@ PageType {
                 disabledColor: AmneziaStyle.color.mutedGray
                 textColor: AmneziaStyle.color.goldenApricot
 
-                text: qsTr("Site Amnezia")
+                text: "AMN VPN"
 
                 rightImageSource: "qrc:/images/controls/external-link.svg"
 
                 clickedFunc: function() {
-                    Qt.openUrlExternally(LanguageUiController.getCurrentSiteUrl())
+                    Qt.openUrlExternally("https://amnvpn.ru")
                 }
             }
         }
     }
 
     property list<QtObject> variants: [
-        amneziaVpn,
         selfHostVpn,
         backupRestore,
         fileOpen,
@@ -278,24 +277,6 @@ PageType {
         siteLink
     ]
     
-    QtObject {
-        id: amneziaVpn
-
-        property string title: qsTr("VPN by Amnezia")
-        property string description: qsTr("The easiest way to connect to the VPN")
-        property string imageSource: "qrc:/images/controls/amnezia.svg"
-        property bool featuredAmneziaConnection: true
-        property bool isVisible: true
-        property var handler: function() {
-            PageController.showBusyIndicator(true)
-            var result = SubscriptionUiController.fillAvailableServices()
-            PageController.showBusyIndicator(false)
-            if (result) {
-                PageController.goToPage(PageEnum.PageSetupWizardApiServicesList)
-            }
-        }
-    }
-
     QtObject {
         id: selfHostVpn
 
@@ -394,7 +375,7 @@ PageType {
         property string imageSource: "qrc:/images/controls/help-circle.svg"
         property bool isVisible: PageController.isStartPageVisible() && Qt.platform.os !== "ios" && !IsMacOsNeBuild
         property var handler: function() {
-            Qt.openUrlExternally(LanguageUiController.getCurrentSiteUrl())
+            Qt.openUrlExternally("https://amnvpn.ru")
         }
     }
 }

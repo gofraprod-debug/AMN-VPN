@@ -1,7 +1,7 @@
 package org.amnezia.vpn.protocol.xray
 
-import org.amnezia.vpn.protocol.ProtocolConfig
-import org.amnezia.vpn.util.net.InetNetwork
+import ru.amn.vpn.protocol.ProtocolConfig
+import ru.amn.vpn.util.net.InetNetwork
 
 private const val XRAY_DEFAULT_MTU = 1500
 private const val XRAY_DEFAULT_MAX_MEMORY: Long = 50 shl 20 // 50 MB

@@ -18,7 +18,7 @@ PageType {
         target: UpdateController
 
         function onUpdateNotFound() {
-            PageController.showNotificationMessage(qsTr("You have the latest version of AmneziaVPN"))
+            PageController.showNotificationMessage("У вас последняя версия AMN VPN")
         }
 
         function onUpdateCheckFailed() {
@@ -55,6 +55,7 @@ PageType {
             Image {
                 id: image
                 source: "qrc:/images/amneziaBigLogo.png"
+                fillMode: Image.PreserveAspectFit
 
                 Layout.alignment: Qt.AlignCenter
                 Layout.topMargin: 16
@@ -70,7 +71,7 @@ PageType {
                 Layout.leftMargin: 16
                 Layout.rightMargin: 16
 
-                text: qsTr("Support Amnezia")
+                text: "AMN VPN"
                 horizontalAlignment: Text.AlignHCenter
             }
 
@@ -85,7 +86,7 @@ PageType {
                 height: 20
                 font.pixelSize: 14
 
-                text: qsTr("Amnezia is a free and open-source application. You can support the developers if you like it.")
+                text: "Быстрый и безопасный VPN на базе открытого кода AmneziaVPN"
                 color: AmneziaStyle.color.paleGray
             }
 
@@ -186,7 +187,7 @@ PageType {
                 text: qsTr("Privacy Policy")
 
                 clickedFunc: function() {
-                    Qt.openUrlExternally(LanguageUiController.getCurrentSiteUrl("policy"))
+                    Qt.openUrlExternally("https://amnvpn.ru/privacy")
                 }
             }
         }
@@ -194,7 +195,6 @@ PageType {
     
     property list<QtObject> contacts: [
         telegramGroup,
-        mail,
         github,
         website
     ]
@@ -202,44 +202,33 @@ PageType {
     QtObject {
         id: telegramGroup
 
-        readonly property string title: qsTr("Telegram group")
-        readonly property string description: qsTr("To discuss features")
+        readonly property string title: "Telegram"
+        readonly property string description: "Поддержка и обратная связь"
         readonly property string imageSource: "qrc:/images/controls/telegram.svg"
         readonly property var handler: function() {
-            Qt.openUrlExternally(qsTr("https://telegram.me/amnezia_vpn_en"))
-        }
-    }
-
-    QtObject {
-        id: mail
-
-        readonly property string title: qsTr("support@amnezia.org")
-        readonly property string description: qsTr("For reviews and bug reports")
-        readonly property string imageSource: "qrc:/images/controls/mail.svg"
-        readonly property var handler: function() {
-            Qt.openUrlExternally(qsTr("mailto:support@amnezia.org"))
+            Qt.openUrlExternally("https://t.me/Amn_vpn2_bot")
         }
     }
 
     QtObject {
         id: github
 
-        readonly property string title: qsTr("GitHub")
-        readonly property string description: qsTr("Discover the source code")
+        readonly property string title: "GitHub"
+        readonly property string description: "Исходный код проекта"
         readonly property string imageSource: "qrc:/images/controls/github.svg"
         readonly property var handler: function() {
-            Qt.openUrlExternally(qsTr("https://github.com/amnezia-vpn/amnezia-client"))
+            Qt.openUrlExternally("https://github.com/gofraprod-debug/AMN-VPN")
         }
     }
 
     QtObject {
         id: website
 
-        readonly property string title: qsTr("Website")
-        readonly property string description: qsTr("Visit official website")
-        readonly property string imageSource: "qrc:/images/controls/amnezia.svg"
+        readonly property string title: "Сайт"
+        readonly property string description: "amnvpn.ru"
+        readonly property string imageSource: "qrc:/images/controls/globe-2.svg"
         readonly property var handler: function() {
-            Qt.openUrlExternally(LanguageUiController.getCurrentSiteUrl())
+            Qt.openUrlExternally("https://amnvpn.ru")
         }
     }
 }
